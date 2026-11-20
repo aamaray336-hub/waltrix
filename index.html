@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#091321">
+<title>WALTRIX — Smart Blockchain Radar</title>
+<style>
+:root{--bg:#08111f;--panel:#101e30;--line:#263950;--muted:#9aadc4;--cyan:#56d5ff;--green:#4ce0b0;--gold:#ffce76;--red:#ff8585}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0,#12314a 0,transparent 40%),linear-gradient(145deg,#07101d,#0b1728 65%,#101d30);font-family:Tahoma,Arial,sans-serif;color:#eef7ff;min-height:100vh}main{max-width:920px;margin:auto;padding:22px 15px 50px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:15px;background:linear-gradient(145deg,#174b70,#10263d);display:grid;place-items:center;color:var(--cyan);font-size:29px;box-shadow:0 0 25px #35b9ec33}h1{font-size:22px;letter-spacing:1px;margin:0}.tag{font-size:10px;color:var(--cyan);letter-spacing:2px;margin-top:5px}.status{border:1px solid #245c58;color:var(--green);padding:7px 10px;border-radius:20px;font-size:11px}.intro{color:var(--muted);font-size:12px;line-height:1.9;margin:18px 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.panel{background:linear-gradient(160deg,#13243a,#0e1a2b);border:1px solid var(--line);border-radius:18px;padding:17px;box-shadow:0 14px 35px #0003}.wide{grid-column:1/-1}h2{font-size:16px;margin:0 0 13px}.muted{color:var(--muted);font-size:12px;line-height:1.9}label{display:block;font-size:12px;margin:13px 0 7px}select,input{width:100%;background:#091626;color:#f2f8ff;border:1px solid #304760;border-radius:11px;padding:13px;font-size:14px;outline:none}input{direction:ltr;text-align:left}button{border:0;border-radius:11px;padding:13px 16px;background:linear-gradient(90deg,#168cc4,#45d0f4);color:#061321;font-weight:bold;font-size:14px;cursor:pointer;margin-top:13px}button:disabled{opacity:.55;cursor:wait}.primary{width:100%}.error{color:var(--red);font-size:12px;margin-top:10px}.result{display:none;margin-top:15px}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.stat{background:#091727;border:1px solid #233a53;border-radius:13px;padding:13px}.stat small{display:block;color:var(--muted);font-size:11px}.stat b{display:block;font-size:17px;margin-top:8px;direction:ltr;text-align:right;overflow-wrap:anywhere}.row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #23364d;font-size:12px}.row:last-child{border:0}.ltr{direction:ltr;text-align:left;overflow-wrap:anywhere}.pill{border:1px solid #285c53;color:var(--green);padding:5px 9px;border-radius:18px;font-size:10px}.warn{border-color:#64512e;background:#201d17}.warn strong{color:var(--gold)}.history{max-height:390px;overflow:auto}.tx{padding:11px 0;border-bottom:1px solid #23364d;font-size:11px}.txhead{display:flex;justify-content:space-between;gap:8px;margin-bottom:7px}.tx a,.link{color:var(--cyan);text-decoration:none}.empty{color:var(--muted);font-size:12px;padding:12px 0}.foot{text-align:center;color:#7288a2;font-size:10px;margin-top:20px;line-height:1.9}@media(max-width:650px){.grid{grid-template-columns:1fr}.wide{grid-column:auto}.top{align-items:flex-start}.stats{grid-template-columns:1fr 1fr}}
+</style></head>
+<body><main>
+<header class="top"><div class="brand"><div class="logo">⌁</div><div><h1>WALTRIX</h1><div class="tag">SMART BLOCKCHAIN RADAR</div></div></div><span class="status">● نسخه آزمایشی توسعه‌یافته</span></header>
+<p class="intro">رادار فقط‌خواندنی اطلاعات عمومی بلاک‌چین. در این مرحله، شبکه TRON و موجودی TRX و توکن USDT-TRC20 به همراه انتقال‌های اخیر بررسی می‌شوند.</p>
+<div class="grid">
+<section class="panel"><h2>اسکن آدرس ترون</h2><div class="muted">آدرس عمومی TRON را وارد کن. فقط اطلاعات عمومی خوانده می‌شود؛ هیچ کلید خصوصی یا عبارت بازیابی لازم نیست.</div><label for="address">آدرس عمومی کیف پول</label><input id="address" autocomplete="off" spellcheck="false" placeholder="T..."><button class="primary" id="scan">اسکن کیف پول</button><div class="error" id="error" role="status"></div></section>
+<section class="panel"><h2>قابلیت‌های این نسخه</h2><div class="row"><span>موجودی شبکه</span><b>TRX</b></div><div class="row"><span>توکن پایش‌شده</span><b>USDT · TRC20</b></div><div class="row"><span>تاریخچه</span><b>انتقال‌های اخیر</b></div><div class="row"><span>منبع داده</span><b>TronGrid API</b></div><p class="muted">نسخه عمومی ممکن است با محدودیت نرخ درخواست یا اختلال سرویس‌دهنده روبه‌رو شود.</p></section>
+<section class="panel wide" id="subscriptionPanel">
+<h2>اشتراک WALTRIX</h2>
+<p class="muted">خرید اشتراک از طریق درگاه بانکی پس از فعال‌سازی پذیرندگی. پرداخت USDT فعلاً غیرفعال است.</p>
+<div class="stats">
+ <div class="stat"><small>اشتراک ماهانه · ۳۰ روز</small><b id="monthlyPrice">در انتظار تنظیم قیمت</b><button class="primary" id="buyMonthly" disabled>پرداخت ماهانه</button></div>
+ <div class="stat"><small>اشتراک سالانه · ۳۶۵ روز</small><b id="yearlyPrice">در انتظار تنظیم قیمت</b><button class="primary" id="buyYearly" disabled>پرداخت سالانه</button></div>
+</div>
+<div class="muted" id="paymentMessage" role="status" style="margin-top:12px">درگاه پرداخت هنوز در حالت آماده‌سازی است.</div>
+</section>
+<section class="panel wide result" id="result"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h2>نتیجه اسکن</h2><span class="pill">داده شبکه</span></div><div class="stats"><div class="stat"><small>موجودی TRX</small><b id="trx">—</b></div><div class="stat"><small>موجودی USDT (TRC20)</small><b id="usdt">—</b></div></div><div class="row"><span>آدرس</span><span class="ltr" id="wallet"></span></div><div class="row"><span>آخرین به‌روزرسانی</span><span id="updated"></span></div><div class="row"><span>اکسپلورر</span><a class="link" id="explorer" target="_blank" rel="noopener">مشاهده در Tronscan ↗</a></div></section>
+<section class="panel wide result" id="historyPanel"><h2>انتقال‌های اخیر USDT</h2><div class="muted">حداکثر ۱۰ انتقال تأییدشده‌ای که API عمومی برمی‌گرداند.</div><div class="history" id="history"><div class="empty">در انتظار دریافت اطلاعات…</div></div></section>
+<section class="panel warn wide"><strong>هشدار امنیتی و مالکیت</strong><p class="muted">قدیمی یا بدون تراکنش بودن یک کیف پول به معنی بی‌صاحب بودن آن نیست. WALTRIX فقط داده‌های عمومی را تحلیل می‌کند و قابلیت دسترسی یا انتقال دارایی دیگران را ندارد. هرگز عبارت بازیابی، کلید خصوصی یا رمز کیف پول را در این ابزار یا برای هیچ‌کس ارسال نکن.</p></section>
+</div><div class="foot">WALTRIX · SMART BLOCKCHAIN RADAR · نسخه توسعه‌ای ۲<br>نسخه توسعه‌ای؛ برای انتشار عمومی، تنظیم دامنه و HTTPS، تکمیل احراز هویت، قیمت‌گذاری و فعال‌سازی پذیرندگی الزامی است.</div>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const API='https://api.trongrid.io';
+const USDT='TXLAQ63Xg1NAzckPwKHvzw7CSEmLMEqcdj';
+const toman=n=>Number(n).toLocaleString('fa-IR')+' تومان';
+async function loadPaymentConfig(){
+ try{
+  const r=await fetch('/api/payment/config'); if(!r.ok) throw new Error(); const c=await r.json();
+  $('monthlyPrice').textContent=c.monthly.enabled?toman(c.monthly.priceToman):'قیمت تعیین نشده';
+  $('yearlyPrice').textContent=c.yearly.enabled?toman(c.yearly.priceToman):'قیمت تعیین نشده';
+  $('buyMonthly').disabled=!c.monthly.enabled; $('buyYearly').disabled=!c.yearly.enabled;
+  $('paymentMessage').textContent=c.monthly.enabled||c.yearly.enabled?'درگاه بانکی '+(c.sandbox?'در حالت آزمایشی':'در حالت عملیاتی')+' تنظیم شده است.':'برای فعال شدن خرید، قیمت‌ها و شناسه پذیرنده باید در تنظیمات امن سرور ثبت شوند.';
+ }catch{$('paymentMessage').textContent='برای پرداخت، WALTRIX باید از طریق سرور و دامنه HTTPS اجرا شود.';}
+}
+async function startCheckout(plan){
+ const btn=plan==='monthly'?$('buyMonthly'):$('buyYearly'); const old=btn.textContent; btn.disabled=true; btn.textContent='در حال اتصال به درگاه…';
+ try{const r=await fetch('/api/payment/zarinpal/create',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({plan})});const j=await r.json();if(!r.ok)throw new Error(j.error||'ساخت پرداخت ناموفق بود');location.href=j.redirectUrl;}
+ catch(e){$('paymentMessage').textContent=e.message;btn.disabled=false;btn.textContent=old;}
+}
+$('buyMonthly').addEventListener('click',()=>startCheckout('monthly'));
+$('buyYearly').addEventListener('click',()=>startCheckout('yearly'));
+loadPaymentConfig();
+const paymentState=new URLSearchParams(location.search).get('payment');
+if(paymentState==='success')$('paymentMessage').textContent='پرداخت با موفقیت تأیید شد. اشتراک به این مرورگر متصل شد.';
+else if(paymentState==='failed')$('paymentMessage').textContent='پرداخت انجام نشد یا تأیید نشد.';
+else if(paymentState==='pending')$('paymentMessage').textContent='وضعیت پرداخت هنوز قطعی نیست؛ از پرداخت مجدد تا بررسی وضعیت خودداری کن.';
+
+function fmt(n,d=6){return Number(n).toLocaleString('en-US',{maximumFractionDigits:d});}
+function validTron(a){return /^T[1-9A-HJ-NP-Za-km-z]{33}$/.test(a)}
+async function getJson(url){const r=await fetch(url,{headers:{'Accept':'application/json'}});if(!r.ok)throw new Error('پاسخ سرویس بلاک‌چین: '+r.status);const j=await r.json();if(j.Error||j.success===false)throw new Error(j.Error||'خطای سرویس');return j;}
+function date(ts){try{return new Date(ts).toLocaleString('fa-IR')}catch{return '—'}}
+function txHtml(t,address){const from=t.from||'',to=t.to||'',amt=Number(t.value||0)/1e6, incoming=to===address;const id=t.transaction_id||t.transactionId||'';return `<div class="tx"><div class="txhead"><b>${incoming?'دریافتی':'ارسالی'} · ${fmt(amt,4)} USDT</b><span>${date(t.block_timestamp)}</span></div><div class="row"><span>از</span><span class="ltr">${from||'—'}</span></div><div class="row"><span>به</span><span class="ltr">${to||'—'}</span></div><div style="margin-top:7px"><a class="link" target="_blank" rel="noopener" href="https://tronscan.org/#/transaction/${encodeURIComponent(id)}">جزئیات تراکنش ↗</a></div></div>`;}
+$('scan').addEventListener('click',async()=>{const a=$('address').value.trim(),btn=$('scan');$('error').textContent='';$('result').style.display='none';$('historyPanel').style.display='none';if(!validTron(a)){$('error').textContent='آدرس معتبر TRON وارد کن؛ آدرس‌های ترون معمولاً با T شروع می‌شوند و ۳۴ کاراکتر دارند.';return;}btn.disabled=true;btn.textContent='در حال دریافت اطلاعات…';try{
+ const [account,transfers]=await Promise.all([getJson(`${API}/v1/accounts/${encodeURIComponent(a)}`),getJson(`${API}/v1/accounts/${encodeURIComponent(a)}/transactions/trc20?limit=10&only_confirmed=true&contract_address=${USDT}&order_by=block_timestamp,desc`)]);
+ const acc=(account.data||[])[0]||{};const trx=Number(acc.balance||0)/1e6;let usdtRaw='0';for(const item of (acc.trc20||[])){if(item[USDT]!==undefined){usdtRaw=String(item[USDT]);break;}}
+ $('trx').textContent=fmt(trx,6)+' TRX';$('usdt').textContent=fmt(Number(usdtRaw)/1e6,6)+' USDT';$('wallet').textContent=a;$('updated').textContent=new Date().toLocaleString('fa-IR');$('explorer').href='https://tronscan.org/#/address/'+encodeURIComponent(a);$('result').style.display='block';
+ const list=transfers.data||[];$('history').innerHTML=list.length?list.map(t=>txHtml(t,a)).join(''):'<div class="empty">انتقال USDT تأییدشده‌ای در پاسخ فعلی سرویس پیدا نشد.</div>';$('historyPanel').style.display='block';
+ }catch(e){$('error').textContent='دریافت اطلاعات ناموفق بود: '+e.message+'؛ ممکن است API عمومی محدود یا موقتاً در دسترس نباشد.';}finally{btn.disabled=false;btn.textContent='اسکن کیف پول';}});
+</script></body></html>
