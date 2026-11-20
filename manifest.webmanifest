@@ -1,0 +1,9 @@
+{
+  "name": "WALTRIX Smart Blockchain Radar",
+  "short_name": "WALTRIX",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#071323",
+  "theme_color": "#081426",
+  "description": "Read-only blockchain wallet analytics"
+}
